@@ -12,3 +12,7 @@ Scripting and coding in python and C++
 ## Languages support
 
 The supporting languages are: French, English, Portuguese, German, Spanish and Italian for now. The script is still under development but functional
+
+## Configuration 
+
+Run the batchfile script to install python and its libraries.
