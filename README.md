@@ -15,4 +15,4 @@ The supporting languages are: French, English, Portuguese, German, Spanish and I
 
 ## Configuration 
 
-Run the batchfile script to install python and its libraries. Then run the ReconVoice.cpp to launch the script
+Run the batchfile script to install python and its libraries. Then run the ReconVoice.cpp to launch the script. The only compatible file formats are ".wav".
