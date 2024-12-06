@@ -137,6 +137,41 @@ int RU()
     
     return 0;
 }
+
+int ZHCN()
+{
+    std::string command;
+    std::string dir = "Languages/zh-CN";
+    std::cout << "\nPlease insert the audio file in .wav extention : ";
+    std::cin >> audio;
+    std::cout << "\n Please indicate the path and name of the outgoing .txt extention file : ";
+    std::cin >> output;
+
+    std::string CHINTOK = "python ZH.py -a \"" + audio + "\"-o \"" + output +"\"";
+
+    std::string fullCommand = "cd /d" + dir " && " + CHINTOK;
+    system(fullCommand.c_str());
+
+    return 0;
+}
+
+int JP()
+{
+    std::string command;
+    std::string dir = "Languages/ja-JP";
+    std::cout << "\nPlease insert the audio file in .wav extention : ";
+    std::cin >> audio;
+    std::cout << "\n Please indicate the path and name of the outgoing .txt extention file : ";
+    std::cin >> output;
+
+    std::string JAPAN = "python JP.py -a \"" + audio + "\"-o \"" + output +"\"";
+
+    std::string fullCommand = "cd /d" + dir " && " + JAPAN;
+    system(fullCommand.c_str());
+
+    return 0;
+
+}
 int main()
 {
     system("cls");
@@ -150,6 +185,8 @@ int main()
     std::cout << "5. Italian" << std::endl;
     std::cout << "6. Portuguese" << std::endl;
     std::cout << "7. Russian" << std::endl; 
+    std::cout << "8. Chinese" << std::endl;
+    std::cout << "9. Japan" << std::endl;
     std::cout << "Please choose : ";
     std::cin >> choice;
 
@@ -181,7 +218,14 @@ int main()
     {
         RU();
     }
-
+    else if (choice == 8)
+    {
+        ZHCN();
+    }
+    else if (choice == 9)
+    {
+        JP();
+    }
     return 0;
     std::cin.ignore();
 }
