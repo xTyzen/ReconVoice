@@ -121,6 +121,22 @@ int PT()
     return 0;
 }
 
+int RU()
+{
+    std::string command;
+    std::string dir = "Languages/ru-RU";
+    std::cout << "\nPlease insert the audio file in .wav extention : ";
+    std::cin >> audio;
+    std::cout << "\n Please indicate the path and name of the outgoing .txt extention file : ";
+    std::cin >> output;
+
+    std::string RUSSIAN = "python RU.py -a \"" + audio + "\" -o \"" + output + "\"";
+
+    std::string fullCommand = "cd /d" + dir " && " + RUSSIAN;
+    system(fullCommand.c_str());
+    
+    return 0;
+}
 int main()
 {
     system("cls");
@@ -133,6 +149,7 @@ int main()
     std::cout << "4. German" << std::endl;
     std::cout << "5. Italian" << std::endl;
     std::cout << "6. Portuguese" << std::endl;
+    std::cout << "7. Russian" << std::endl; 
     std::cout << "Please choose : ";
     std::cin >> choice;
 
@@ -159,6 +176,10 @@ int main()
     else if (choice == 6)
     {
         PT();
+    }
+    else if (choice == 7)
+    {
+        RU();
     }
 
     return 0;
